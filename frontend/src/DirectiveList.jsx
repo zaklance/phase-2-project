@@ -24,9 +24,9 @@ function DirectiveList({ directive111Data }) {
                     <li>Maelstrom</li>
                     <ul>
                         <li title="Center Pt">{mass.maelstrom.centerPt}</li>
-                        <li title="Center Pt">{mass.maelstrom.radius1}</li>
-                        <li title="Center Pt">{mass.maelstrom.radius2}</li>
-                        <li title="Center Pt">{mass.maelstrom.callAngle}</li>
+                        <li title="Radius 1">{mass.maelstrom.radius1}</li>
+                        <li title="Radius 2">{mass.maelstrom.radius2}</li>
+                        <li title="Call Angle">{mass.maelstrom.callAngle}</li>
                     </ul>
                     <li>Square 1 Points</li>
                     <ul>

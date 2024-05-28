@@ -22,6 +22,7 @@ function Form111({ handleSubmit, directive111Data }) {
     const [ clickGuidePt1, setClickGuidePt1 ] = useState([0, 0]);
     const [ clickGuidePt2, setClickGuidePt2 ] = useState([0, 0]);
     const [ sq1CalcPts, setSq1CalcPts ] = useState([]);
+    const [ fullname, setFullname ] = useState('');
     
     function handleClick(event) {
         setCounter(counter + 1);       
@@ -51,22 +52,37 @@ function Form111({ handleSubmit, directive111Data }) {
         points.push([(h + 0.5 * L * Math.cos(theta)).toFixed(2), (k - 0.5 * L * Math.sin(theta)).toFixed(2)]);
         return points;
     }
+    // Name to numbers equation
+    function fullnameToNumber(name) {
+        const names = name.split(' ');
+        let nameArray = names.map(word => {
+            let firstLetter = word.charAt(0);
+            let charCode = firstLetter.charCodeAt(0);
+            let position = charCode - 65;
+            let formattedPosition = position < 10 ? '0' + position : position;
+            return formattedPosition
+        });
+        return nameArray.join('-')
+    };
+    
 
     return (
         <form id="form111" onSubmit={handleSubmit} >
                 <h3>Mass Modeler</h3>
                 <h4 className="formHeader">Identifier</h4>
                 <label>
-                    <input type="text" name="massName" placeholder="Mass Name"/>
+                    <input type="text" name="massName" placeholder="Mass Name" value={fullnameToNumber(fullname)} readOnly/>
                 </label>
                 <h4 className="formHeader">Creator</h4>
                 <label>
-                    <input type="text" name="creator" placeholder="Creator Full Name"/>
+                    <input type="text" name="creator" placeholder="Creator Full Name" value={fullname} onChange={event => setFullname(event.target.value)}/>
                 </label>
+                <p className="smallText, hidden">Enter your name (include middle name)</p>
                 <h4 className="formHeader">EC-1 Layer Name</h4>
                 <label>
                     <input type="text" name="ec1Name" placeholder="Layer Name"/>
                 </label>
+                <p className="smallText, hidden">Give the layer a name!</p>
                 <h4 className="formHeader">EC-1 Points</h4>
                 <label className="slimLabel">
                     <input id="ec1Pt1" type="text" name="ec1Pt1" placeholder="Point 1 (x, y)" value={clickOffsetXY1} onChange={event => setClickOffsetXY1([event.nativeEvent.offsetX, event.nativeEvent.offsetY])} />
@@ -112,13 +128,14 @@ function Form111({ handleSubmit, directive111Data }) {
                         <circle className="dot-purple" cx={clickGuidePt2[0]} cy={clickGuidePt2[1]} r="3" />
                         <line id="guide" x1={clickGuidePt1[0]} y1={clickGuidePt1[1]} x2={clickGuidePt2[0]} y2={clickGuidePt2[1]} />
                     </svg>
-                    <p className="smallText">Click the points of your polyline in the square above. 6 clicks: 1 acute angle, 1 obtuse, and one right angle.</p>
+                    <p className="smallText">Click the points of your polyline in the square above. 6 clicks: 1 acute angle, 1 obtuse, and one right angle</p>
                 </div>
                 <h4 className="formHeader">EC-1 Height</h4>
                 <label>
                     <input type="number" name="ec1Height" placeholder="Height" value={ec1Height} onChange={event => setEc1Height(event.target.value)}/>
                 </label>
                 <h4 className="formHeader">Maelstrom</h4>
+                <p className="smallText">Click a center point for the Maelstrom manipulation, and then it's range and angle</p>
                 <label className="slimLabel">
                     <input type="text" name="centerPt" placeholder="Center Point" value={clickMaelstromPt} onChange={event => setClickMaelstromPt([event.nativeEvent.offsetX, event.nativeEvent.offsetY])} />
                 </label>
@@ -132,6 +149,7 @@ function Form111({ handleSubmit, directive111Data }) {
                     <input type="number" name="callAngle" placeholder="Call Angle"/>
                 </label>
                 <h4 className="formHeader">Square 1 Points</h4>
+                <p className="smallText">Enter the width, rotation agnel, and click it's center</p>
                 <label>
                     <input type="number" name="sq1Width" placeholder="Square Width" onChange={event => setSq1Width(event.target.value)} />
                 </label>
@@ -155,6 +173,7 @@ function Form111({ handleSubmit, directive111Data }) {
                     <input type="number" name="sq1Height" placeholder="Height" value={ec1Height} onChange={event => setEc1Height(event.target.value)}/>
                 </label>
                 <h4 className="formHeader">Guide Line Points</h4>
+                <p className="smallText">Click on the convex point of EC-1 polyline and then to a nearby midpoint on the perimeter of EC-1</p>
                 <label className="slimLabel">
                     <input type="text" name="guidePt1" placeholder="Point 1 (x, y, z)" value={`${clickGuidePt1},0`} onChange={event => setClickGuidePt1(event.target.value)} />
                 </label>
@@ -165,7 +184,7 @@ function Form111({ handleSubmit, directive111Data }) {
                 <label className="slimLabel">
                     <input type="number" name="cutDepth" placeholder="cut depth"/>
                 </label>
-                <label className="slimLabel">
+                {/* <label className="slimLabel">
                     <input type="text" name="selectDelete" placeholder="Delete: A or B"/>
                 </label>
                 <h4 className="formHeader">Square 2 Points</h4>
@@ -184,12 +203,13 @@ function Form111({ handleSubmit, directive111Data }) {
                 <h4 className="formHeader">Square 2 Height</h4>
                 <label>
                     <input type="number" name="sq2Height" placeholder="Height"/>
-                </label>
+                </label> */}
                 <h4 className="formHeader">Shirt Color</h4>
                 <label>
-                    <input type="text" name="colorShirt" placeholder="Color of Shirt"/>
+                    <input type="text" name="colorShirt" placeholder="Color of your current shirt"/>
                 </label>
                 <h4 className="formHeader">Eye Color</h4>
+                <p className="smallText">Set the color to that of your eye, try and be realistic.</p>
                 <label>
                     <input type="text" name="colorEye" placeholder="RGB Values 0-255 (r,g,b)" value={colorArrayValues} onChange={event => event.target.value}/>
                 </label>
@@ -200,10 +220,10 @@ function Form111({ handleSubmit, directive111Data }) {
                 <label>
                     <input type="text" name="emailContent" placeholder="Text, if they entered a message"/>
                 </label>
-                <h4 className="formHeader">Error</h4>
+                {/* <h4 className="formHeader">Error</h4>
                 <label>
                     <input type="text" name="error" placeholder="Error Info"/>
-                </label>
+                </label> */}
                 <input id="submit" type="submit" value="Submit Mass"/>
         </form>
     )

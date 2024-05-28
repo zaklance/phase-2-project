@@ -1,5 +1,5 @@
 {
-  "data": [
+  "111": [
     {
       "id": "1",
       "name": "14-02",
@@ -817,40 +817,40 @@
       "error": "008, 011-3 - Did not extrude curve as solid.EC-1 has 1 extra side, for a total of 7 sides, final point is 52.76, -87.67"
     },
     {
-      "id": "AHm8Tv2",
-      "name": "",
-      "creator": "",
-      "ec1Name": "",
+      "id": "9_ANWTc",
+      "name": "09-00-18",
+      "creator": "John Apple Smith",
+      "ec1Name": "Great Name",
       "ec1Points": {
-        "xyPt1": "41,33",
-        "xyPt2": "112,34",
-        "xyPt3": "105,121",
-        "xyPt4": "41,102",
-        "xyPt5": "42,67",
-        "xyPt6": "84,67"
+        "xyPt1": "40,31",
+        "xyPt2": "108,30",
+        "xyPt3": "110,109",
+        "xyPt4": "51,125",
+        "xyPt5": "40,86",
+        "xyPt6": "81,58"
       },
-      "ec1Height": "0",
+      "ec1Height": "60",
       "maelstrom": {
-        "centerPt": "89,39",
-        "radius1": "",
-        "radius2": "",
-        "callAngle": ""
+        "centerPt": "83,67",
+        "radius1": "24",
+        "radius2": "48",
+        "callAngle": "38"
       },
       "tweenCurve": "",
       "square1": {
-        "xyPt1": "NaN,NaN",
-        "xyPt2": "NaN,NaN",
-        "xyPt3": "NaN,NaN",
-        "xyPt4": "NaN,NaN",
-        "height": "0"
+        "xyPt1": "35.20,114.45",
+        "xyPt2": "5.55,95.20",
+        "xyPt3": "24.80,65.55",
+        "xyPt4": "54.45,84.80",
+        "height": "60"
       },
       "guide": {
-        "xyzPt1": "0,0,0",
-        "xyzPt2": "0,0,0",
+        "xyzPt1": "52,126,0",
+        "xyzPt2": "52,126,60",
         "length": ""
       },
       "wirecut": {
-        "depth": "",
+        "depth": "27",
         "selectDelete": ""
       },
       "square2": {
@@ -861,11 +861,55 @@
         "height": ""
       },
       "ec2": {
-        "colorShirt": "",
-        "colorEye": "66,103,209"
+        "colorShirt": "White",
+        "colorEye": "110,132,192"
       },
       "emailContent": "",
       "error": ""
+    }
+  ],
+  "111-lists": [
+    {
+      "id": 1,
+      "list": [
+        "6",
+        "12",
+        "15",
+        "2"
+      ]
+    },
+    {
+      "id": 2,
+      "list": [
+        "4",
+        "1",
+        "9_ANWTc",
+        "11"
+      ]
+    },
+    {
+      "id": 3,
+      "list": [
+        "3",
+        "9",
+        "8",
+        "16"
+      ]
+    },
+    {
+      "id": 4,
+      "list": [
+        "10",
+        "7",
+        "5",
+        "14"
+      ]
+    },
+    {
+      "id": 5,
+      "list": [
+        "13"
+      ]
     }
   ]
 }
