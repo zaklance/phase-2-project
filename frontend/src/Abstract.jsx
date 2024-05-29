@@ -1,13 +1,11 @@
 import React from 'react';
-import section from './assets/images/850_2018_wosewick_A3-Directive-DIA-601-20_PortCQ.jpg';
-
 
 function Abstract() {
 
     return (
         <>
             <div className='container'>
-                <div className='a4Page'>
+                <div className='aside'>
                     <div className='page'>
                         <h3>Abstact</h3>
                         <p>
@@ -25,7 +23,7 @@ function Abstract() {
                     </div>
                 </div>
             </div>
-            <img className='images' src={'http://localhost:5173/src/assets/images/850_2018_wosewick_A3-Directive-DIA-601-20_PortCQ.jpg'} alt="guide image"  />
+            <img className='images' src={'http://localhost:5173/src/assets/images/850_2018_wosewick_A3-Directive-DIA-601-20.pdf'} alt="guide image"  />
         </>
     )
 }

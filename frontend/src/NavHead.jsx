@@ -28,13 +28,13 @@ function NavHead() {
                             <li>Results</li>
                         </ul> */}
                     </li>
-                    <li className="nav-link-box">
+                    {/* <li className="nav-link-box">
                         <NavLink
                         to='/211-Cohesion-&-the-Outcast'
                         className='nav-link' >
                             Directive 211
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-link-box">
                         <NavLink
                         to='/Theory'

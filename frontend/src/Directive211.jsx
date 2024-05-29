@@ -78,6 +78,8 @@ function Directive211() {
         }, []);
 
         console.log(directive111List)
+        directive111List
+        const randomSuit = suits[Math.floor(Math.random() * suits.length)];
 
 
 

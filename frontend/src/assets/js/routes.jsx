@@ -19,10 +19,10 @@ const routes = [
                 path: "/111-Mass-in-a-Box",
                 element: <Directive111 />
             },
-            {
-                path: "/211-Cohesion-&-the-Outcast",
-                element: <Directive211 />
-            },
+            // {
+            //     path: "/211-Cohesion-&-the-Outcast",
+            //     element: <Directive211 />
+            // },
             {
                 path: "/Theory",
                 element: <Theory />

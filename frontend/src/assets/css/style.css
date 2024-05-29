@@ -197,7 +197,11 @@ li {
   margin-right: 32px;
   float: left;
 }
-
+.aside {
+  width: 20%;
+  background-color: white;
+  float: left;
+}
 .page {
   /* position: absolute;
   top: 0;
@@ -219,6 +223,8 @@ li {
   margin-left: 20px;
   /* height: fit-content; */
 }
+
+
 
 /* Small */
 .small .react-colorful {

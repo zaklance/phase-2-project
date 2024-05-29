@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Form111 from "./Form111";
 import DirectiveList from "./DirectiveList";
 import guidePg6 from './assets/images/850-2018_wosewick_A4_Guides-X01-Set_111.jpg';
-// import guidePg6PDF from './assets/images/850-2018_wosewick_A4_Guides-X01-p6.pdf';
 
 
 function Directive111() {
