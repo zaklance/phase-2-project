@@ -866,6 +866,57 @@
       },
       "emailContent": "",
       "error": ""
+    },
+    {
+      "id": "Id5Dk57",
+      "name": "25-19-22",
+      "creator": "Zak T WOsewick",
+      "ec1Name": "Great Name",
+      "ec1Points": {
+        "xyPt1": "35,28",
+        "xyPt2": "121,32",
+        "xyPt3": "122,120",
+        "xyPt4": "45,133",
+        "xyPt5": "33,97",
+        "xyPt6": "81,67"
+      },
+      "ec1Height": "50",
+      "maelstrom": {
+        "centerPt": "95,52",
+        "radius1": "24",
+        "radius2": "48",
+        "callAngle": "38"
+      },
+      "tweenCurve": "",
+      "square1": {
+        "xyPt1": "47.68,107.68",
+        "xyPt2": "12.32,107.68",
+        "xyPt3": "12.32,72.32",
+        "xyPt4": "47.68,72.32",
+        "height": "50"
+      },
+      "guide": {
+        "xyzPt1": "120,117,0",
+        "xyzPt2": "120,117,50",
+        "length": ""
+      },
+      "wirecut": {
+        "depth": "",
+        "selectDelete": ""
+      },
+      "square2": {
+        "xyPt1": "",
+        "xyPt2": "",
+        "xyPt3": "",
+        "xyPt4": "",
+        "height": ""
+      },
+      "ec2": {
+        "colorShirt": "",
+        "colorEye": "75,96,155"
+      },
+      "emailContent": "",
+      "error": ""
     }
   ],
   "111-lists": [
